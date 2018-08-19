@@ -11,6 +11,7 @@ public class Constantes {
 	public static final int SUCCES_ADD_CLIENTE 						= 6;
 	public static final int ERROR_ADD_CLIENTE 						= 7;
 	public static final int ERROR_PRODUTO_NOT_FOUND 				= 8;
+	public static final int ERROR_CLIENTE_NOT_FOUND 				= 9;
 			
 	//Tipo Usuario
 	public static final int TYPE_USER_SALESMAN = 1;

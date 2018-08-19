@@ -49,6 +49,9 @@ public class MobileResponse {
 		case Constantes.ERROR_PRODUTO_NOT_FOUND : 	
 			result = MessageBundle.getString("error_produto_not_found");
 			break;
+		case Constantes.ERROR_CLIENTE_NOT_FOUND :
+			result = MessageBundle.getString("error_cliente_not_found");
+			break;
 		default:
 			break;
 		}

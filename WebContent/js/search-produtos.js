@@ -6,7 +6,7 @@ $(function() {
     
 });
 
-function searchProducts(){
+function searchProdutos(){
 	var params;
 	var url;
 	if($('#typeSearchProduto').val() == "id"){

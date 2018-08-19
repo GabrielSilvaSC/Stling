@@ -32,13 +32,13 @@
             <div id="pageHeader"></div>
 	        <div class="row wrapper border-bottom white-bg page-heading">
 	            <div class="col-sm-4">
-	                <h2>Cadastro</h2>
+	                <h2>Consultar Clientes</h2>
 	                <ol class="breadcrumb">
 	                    <li>
-	                        <a href="index.html">Cliente</a>
+	                        <a href="index.html">Clientes</a>
 	                    </li>
 	                    <li class="active">
-	                        <strong id="pageId">Cadastro</strong>
+	                        <strong id="pageId">Consultar Clientes</strong>
 	                    </li>
 	                </ol>
 	            </div>
@@ -49,31 +49,19 @@
 	                	<div class="ibox float-e-margins">
 	                    	<div class="ibox-content">
 	                    		<div class="modal-body">
-	                                    <form role="form" id="form_cliente" name="form_produto_search">
+	                                    <form role="form" id="form_cliente" name="form_cliente_search">
 											<fieldset class="form-horizontal">
-												<div class="form-group">
-													<label class="col-sm-2 control-label">Pesquisar produtos pelo </label>
-													<div class="col-sm-10">
-														<select class="form-control m-b" name="typeSearchProduto" id="typeSearchProduto"></select>
-													</div>
-												</div>
 												<div class="form-group" id="productId">
-													<label class="col-sm-2 control-label">Código:</label>
+													<label class="col-sm-2 control-label">Pesquisar cliente pelo nome : </label>
 													<div class="col-sm-10">
-														<input type="text" placeholder="" class="form-control" name="produto.id" id="produto.id" required>
-													</div>
-												</div>
-												<div class="form-group" id="productDescription">
-													<label class="col-sm-2 control-label">Descição:</label>
-													<div class="col-sm-10">
-														<input type="text" placeholder="" class="form-control" name="produto.descricao" id="produto.descricao" required>
+														<input type="text" placeholder="" class="form-control" name="cliente.nome" id="cliente.nome" required>
 													</div>
 												</div>
 											</fieldset>
 											<div class="hr-line-dashed"></div>
 		                                	<div class="form-group">
 		                                   		<div class="col-lg-12 col-sm-offset-9">
-			                                        <button class="ladda-button btn btn-primary ladda-button ladda-button-produto" type="button" onClick="searchProducts();">Pesquisar</button>
+			                                        <button class="ladda-button btn btn-primary ladda-button ladda-button-cliente" type="button" onClick="searchCliente();">Pesquisar</button>
 		                                    	</div>
 		                                	</div>
 	                                	</form>
@@ -83,18 +71,24 @@
 	                	</div>
 	            	</div>
 				</div>
-				<div class="wrapper wrapper-content animated fadeInRight" id="dataProduto">
+				<div class="wrapper wrapper-content animated fadeInRight" id="dataCliente">
 	            <div class="row">
 	                <div class="col-lg-12">
 	                	<div class="ibox float-e-margins">
 	                    	<div class="ibox-content">
 	                    		<div class="modal-body">
-	                                    <form role="form" id="form_produto_details" name="form_produto_details">
+	                                    <form role="form" id="form_cliente_details" name="form_cliente_details">
 		                                    <fieldset class="form-horizontal">
-												<div class="form-group"><label class="col-sm-2 control-label">Codigo :</label> <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="produtoResult.id" id="produtoResult.id" disabled></div></div>
-			                                    <div class="form-group"><label class="col-sm-2 control-label">Descricao:</label> <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="produtoResult.descricao" id="produtoResult.descricao"  disabled></div></div>
-			                                    <div class="form-group"><label class="col-sm-2 control-label">Valor:</label>  <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="produtoResult.valor" id="produtoResult.valor" disabled></div></div>
+												<div class="form-group"><label class="col-sm-2 control-label">Nome :</label> <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="clientResult.nome" id="clientResult.nome" disabled></div></div>
+			                                    <div class="form-group"><label class="col-sm-2 control-label">CPF/CNPJ:</label> <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="clientResult.cpfCnpj" id="clientResult.cpfCnpj"  disabled></div></div>
+			                                    <div class="form-group"><label class="col-sm-2 control-label">Endereço:</label>  <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="clienteResult.endereco" id="clienteResult.endereco" disabled></div></div>
 			                                </fieldset>
+			                                <div class="hr-line-dashed"></div>
+		                                	<div class="form-group">
+		                                   		<div class="col-lg-12 col-sm-offset-9">
+			                                        <button class="ladda-button btn btn-primary ladda-button ladda-button-cliente-update" type="button" onClick="editClient();">Atualizar Dados</button>
+		                                    	</div>
+		                                	</div>
 	                                	</form>
 	                               </div>
 	                    		</div>
@@ -105,7 +99,7 @@
 			<div id="pageFooter"></div>
     	</div>
     </div>
-
+ 
     <!-- Mainly scripts -->
     <script src="js/jquery-3.1.1.min.js"></script>
 
@@ -129,7 +123,7 @@
     <script src="js/plugins/ladda/ladda.jquery.min.js"></script>
 	<script src="js/jquery.jeditable.js"></script>
 
-    <script src="js/search-products.js"></script>
+    <script src="js/search-clientes.js"></script>
 
 </body>
 

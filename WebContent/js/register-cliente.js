@@ -73,11 +73,11 @@ $(function() {
         temp = parameters[1].split("=");
         idClient = unescape(temp[1]);
         var params = {
-            "idClient" : idClient
+            "cliente.idCliente" : idClient
         };
         $.ajax({
                     type : "POST",
-                    url : "./findAction?method=cliente",
+                    url : "./findAction?method=findClienteById",
                     data : params,
                     dataType : "json",
                     contentType : "application/x-www-form-urlencoded;charset=ISO-8859-15",
@@ -85,17 +85,16 @@ $(function() {
                         xhr.setRequestHeader('Accept', "text/html; charset=ISO-8859-1");
                     },
                     success : function(msg) {
-                        idClientLogin = msg.idClientLogin;
 
                         $('input[name="cliente.nome"]').val(
-                                msg.cliente.nome == 'undefined' ? "" : msg.cliente.nome);
+                                msg.nome == 'undefined' ? "" : msg.nome);
                         $('input[name="cliente.endereco"]').val(
-                                msg.cliente.endereco == 'undefined' ? "" : msg.cliente.endereco);
+                                msg.endereco == 'undefined' ? "" : msg.endereco);
 
-                        if(msg.cliente.cpfCnpj != undefined){
+                        if(msg.cpfCnpj != undefined){
                             $('input[name="cliente.cpfCnpj"]').val(
-                                    msg.cliente.cpfCnpj == 'undefined' ? "" : msg.cliente.cpfCnpj);
-                            digitsDocument = (msg.cliente.cpfCnpj).replace(/[^a-zA-Z 0-9]+/g,'');
+                                    msg.cpfCnpj == 'undefined' ? "" : msg.cpfCnpj);
+                            digitsDocument = (msg.cpfCnpj).replace(/[^a-zA-Z 0-9]+/g,'');
                             if (digitsDocument.length == 11) {
                                 $('input[name="cliente.cpfCnpj"]').val($('input[name="cliente.cpfCnpj"]').val().replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4'));
                             }else{
@@ -108,7 +107,6 @@ $(function() {
 });
 
 function saveClient(){
-	alert("");
     var params = {  "cliente.nome"       : $('input[name="cliente.nome"]').val(),
                     "cliente.cpfCnpj"     : $('input[name="cliente.cpfCnpj"]').val().replace(/[^\d]+/g, ''),
                     "cliente.endereco"      : $('input[name="cliente.endereco"]').val()

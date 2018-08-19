@@ -56,6 +56,12 @@ public class FindAction extends FindActionImpl {
 				case "findProdutoByDescricao":
 					json = findProdutoByDescricao(request);
 					break;
+				case "findClienteById":
+					json = findClienteById(request);
+					break;
+				case "findClienteByNome":
+					json = findClienteByNome(request);
+					break;
 				default:
 					result = new JSONObject();
 					result.put("result", MessageBundle.getString("method_not_found") + " : " + method);

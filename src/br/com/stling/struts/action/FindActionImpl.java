@@ -14,8 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.com.stling.bean.Cliente;
 import br.com.stling.bean.MobileResponse;
 import br.com.stling.bean.Produto;
+import br.com.stling.dao.ClienteDao;
 import br.com.stling.dao.ProdutoDao;
 import br.com.stling.stream.adapter.HibernateProxyTypeAdapter;
 import br.com.stling.util.Constantes;
@@ -80,6 +82,35 @@ public abstract class FindActionImpl extends HttpServlet {
 			json = gson.toJson(produto); // ==> json is [1,2,3,4,5]
 		}else{
 			json = gson.toJson(new MobileResponse(Constantes.ERROR_PRODUTO_NOT_FOUND));
+		}
+		return json;
+	}
+	
+	protected String findClienteById(HttpServletRequest request) throws Exception {
+		String json;
+		GsonBuilder b = new GsonBuilder();
+		b.registerTypeAdapterFactory(HibernateProxyTypeAdapter.FACTORY);
+		Gson gson = b.create();
+		ClienteDao clienteDao = new ClienteDao();
+		Integer id = Integer.valueOf(request.getParameter("cliente.id"));
+		Cliente cliente = clienteDao.findClienteById(id);
+		json = gson.toJson(cliente); // ==> json is [1,2,3,4,5]
+		return json;
+	}
+	
+	protected String findClienteByNome(HttpServletRequest request) throws Exception {
+		String json;
+		GsonBuilder b = new GsonBuilder();
+		b.registerTypeAdapterFactory(HibernateProxyTypeAdapter.FACTORY);
+		Gson gson = b.create();
+		ClienteDao clienteDao = new ClienteDao();
+		String nome = request.getParameter("cliente.nome");
+		Cliente cliente = clienteDao.findClienteByNome(nome);
+		
+		if(cliente != null){
+			json = gson.toJson(cliente); // ==> json is [1,2,3,4,5]
+		}else{
+			json = gson.toJson(new MobileResponse(Constantes.ERROR_CLIENTE_NOT_FOUND));
 		}
 		return json;
 	}
