@@ -47,6 +47,7 @@
         <mapping resource="br/com/stling/bean/Usuario.hbm.xml"/>
         <mapping resource="br/com/stling/bean/TipoUsuario.hbm.xml"/>
         <mapping resource="br/com/stling/bean/Cliente.hbm.xml"/>
+        <mapping resource="br/com/stling/bean/Produto.hbm.xml"/>
       
     </session-factory>
 </hibernate-configuration>
