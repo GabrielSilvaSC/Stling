@@ -54,36 +54,16 @@
 			<taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>
 		</taglib>
 	</jsp-config>
-	<!-- <servlet>
-		<description></description>
-		<display-name>FindAction</display-name>
-		<servlet-name>FindAction</servlet-name>
-		<servlet-class>br.com.portaria.struts.action.FindAction</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>FindAction</servlet-name>
-		<url-pattern>/findAction</url-pattern>
-	</servlet-mapping>
 	<servlet>
 		<description></description>
 		<display-name>RegisterAction</display-name>
 		<servlet-name>RegisterAction</servlet-name>
-		<servlet-class>br.com.portaria.struts.action.RegisterAction</servlet-class>
+		<servlet-class>br.com.stling.struts.action.RegisterAction</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RegisterAction</servlet-name>
 		<url-pattern>/registerAction</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<description></description>
-		<display-name>DeleteAction</display-name>
-		<servlet-name>DeleteAction</servlet-name>
-		<servlet-class>br.com.portaria.struts.action.DeleteAction</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>DeleteAction</servlet-name>
-		<url-pattern>/deleteAction</url-pattern>
-	</servlet-mapping> -->
 	<servlet>
 		<description></description>
 		<display-name>Login</display-name>

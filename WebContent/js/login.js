@@ -30,7 +30,7 @@ function login()
 			success: function(msg){
 				l.ladda('stop');
 				if (msg.idResult == 2) {
-					window.location = "./page-error404.html";
+					window.location = "./register-cliente.html";
 				}else{
 					$("#msgErro").show();
 					$("#msgErro").html("<button aria-hidden='true' data-dismiss='alert' class='close' type='button'>×</button>" + msg.result);

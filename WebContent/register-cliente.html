@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stling Equipamentos</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- Ladda style -->
+    <link href="css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div id="wrapper">
+
+    	<div id="pageSidebar"></div>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div id="pageHeader"></div>
+	        <div class="row wrapper border-bottom white-bg page-heading">
+	            <div class="col-sm-4">
+	                <h2>Cadastro</h2>
+	                <ol class="breadcrumb">
+	                    <li>
+	                        <a href="index.html">Cliente</a>
+	                    </li>
+	                    <li class="active">
+	                        <strong id="pageId">Cadastro</strong>
+	                    </li>
+	                </ol>
+	            </div>
+	        </div>
+	        <div class="wrapper wrapper-content animated fadeInRight">
+	            <div class="row">
+	                <div class="col-lg-12">
+	                	<div class="ibox float-e-margins">
+	                    	<div class="ibox-content">
+	                    		<div class="modal-body">
+	                                    <form role="form" id="form_cliente" name="form_cliente">
+		                                    <fieldset class="form-horizontal">
+												<div class="form-group"><label class="col-sm-2 control-label">Nome da empresa:</label> <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="cliente.nome" id="cliente.nome" required></div></div>
+			                                    <div class="form-group"><label class="col-sm-2 control-label">CNPJ/CPF:</label> <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="cliente.cpfCnpj" id="cliente.cpfCnpj"  required></div></div>
+			                                    <div class="form-group"><label class="col-sm-2 control-label">Endereço:</label>  <div class="col-sm-10"><input type="text" placeholder="" class="form-control" name="cliente.endereco" id="cliente.endereco" required></div></div>
+			                                </fieldset>
+		                                    <div class="hr-line-dashed"></div>
+		                                	<div class="form-group">
+		                                   		<div class="col-lg-12 col-sm-offset-9">
+			                                        <button class="ladda-button btn btn-primary ladda-button ladda-button-cliente" type="button" id="btnSave">Salvar</button>
+		                                    	</div>
+		                                	</div>
+	                                	</form>
+	                               </div>
+	                    		</div>
+	                		</div>
+	                	</div>
+	            	</div>
+				</div>
+			<div id="pageFooter"></div>
+    	</div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/sidebar.js"></script>
+    <!-- <script src="js/footer.js"></script> -->
+    <!-- <script src="js/header.js"></script> -->
+
+    <!-- <script src="js/plugins/pace/pace.min.js"></script> -->
+
+   	<!-- <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script> -->
+
+    <!-- Jquery Validate -->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/dist-js-validate-jquery.validate-messages-pt-br.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Ladda -->
+    <script src="js/plugins/ladda/spin.min.js"></script>
+    <script src="js/plugins/ladda/ladda.min.js"></script>
+    <script src="js/plugins/ladda/ladda.jquery.min.js"></script>
+
+    <!-- Mask -->
+    <script src="js/jquery.mask.js"></script>
+
+	<script src="js/jquery.jeditable.js"></script>
+
+    <script src="js/register-cliente.js"></script>
+
+</body>
+
+</html>

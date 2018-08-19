@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="br.com.stling.bean.Cliente" table="CLIENTE" catalog="DB_STLING">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="NOME" length="200"/>
+        </property>
+        <property name="cpfCnpj" type="string">
+            <column name="CPF_CNPJ" length="14"/>
+        </property>
+        <property name="endereco" type="string">
+            <column name="ENDERECO" length="200"/>
+        </property>
+    </class>
+</hibernate-mapping>
+
