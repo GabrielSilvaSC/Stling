@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/DB_STLING</property>
+       	<property name="hibernate.connection.username">root</property> 
+        <property name="hibernate.connection.password">rootroot</property>
+        
+        <!-- Print SQL to stdout. -->
+        <property name="show_sql">true</property> 
+        <property name="format_sql">false</property> 
+        
+        <!-- Use the C3P0 connection pool. -->
+		<property name="hibernate.c3p0.min_size">1</property> <!-- Minimum number of JDBC connections in the pool. Hibernate default: 1 -->
+  		<property name="hibernate.c3p0.max_size">100</property> <!-- Maximum number of JDBC connections in the pool. Hibernate default: 100 -->
+  		<property name="hibernate.c3p0.timeout">0</property> <!-- When an idle connection is removed from the pool (in second). Hibernate default: 0, never expire. -->
+  		<property name="hibernate.c3p0.max_statements">0</property> <!-- Number of prepared statements will be cached. Increase performance. Hibernate default: 0 , caching is disable. -->
+  		<property name="hibernate.c3p0.idle_test_period">0</property> <!--  idle time in seconds before a connection is automatically validated. Hibernate default: 0 -->		
+
+        <!-- Disable second-level cache. -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+        <property name="hibernate.cache.use_minimal_puts">false</property>
+        <property name="hibernate.cache.cache_region_factory">org.hibernate.cache.impl.NoCachingRegionFactory</property>
+        <property name="max_fetch_depth">3</property> 
+
+        
+		<property name="cache.use_second_level_cache">false</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="cache.use_query_cache">false</property>
+        <property name="cache.use_minimal_puts">false</property>
+        <property name="cache.cache_region_factory">org.hibernate.cache.impl.NoCachingRegionFactory</property>
+        
+		<property name="hibernate.cache.use_structured_entries">true</property>     
+		<property name="hibernate.cache.generate_statistics">true</property>
+        
+    
+        <!-- Bind the getCurrentSession() method to the thread. -->
+       <property name="current_session_context_class">thread</property>
+
+        <!-- Hibernate XML mapping files -->
+        <mapping resource="br/com/stling/bean/Usuario.hbm.xml"/>
+        <mapping resource="br/com/stling/bean/TipoUsuario.hbm.xml"/>
+      
+    </session-factory>
+</hibernate-configuration>
